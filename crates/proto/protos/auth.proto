@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotfeed.auth;
+
+
+// ==========================================
+// Registration
+// ==========================================
+
+message RegisterRequest {
+  string username = 1;
+  string email = 2;
+}
+
+
+message RegisterResponse {
+  string user_id = 1;
+  bool otp_required = 2;
+  string message = 3; // "OTP sent to email" or error message
+}
